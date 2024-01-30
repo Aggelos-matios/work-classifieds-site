@@ -1,0 +1,40 @@
+DATABASE NAME = website_database
+
+CREATE TABLE users (
+    _id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    username TEXT NOT NULL,
+    email TEXT NOT NULL,
+    pwd TEXT NOT NULL,
+    name TEXT NOT NULL,
+    date TEXT NOT NULL,
+    country TEXT NOT NULL,
+    phoneNumber TEXT NOT NULL,
+    cv TEXT NOT NULL
+);
+
+CREATE TABLE adds(
+    _id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    user_id int(11) NOT NULL,
+    title TEXT NOT NULL,
+    description TEXT NOT NULL,
+    country TEXT NOT NULL,
+    city TEXT NOT NULL,
+    expertise TEXT NOT NULL,
+    occupation TEXT NOT NULL
+);
+
+CREATE TABLE countries(
+    _id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name TEXT NOT NULL
+);
+
+CREATE TABLE cities(
+    _id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    country_id int(11) NOT NULL,
+    name TEXT NOT NULL
+);
+
+CREATE TABLE expertises(
+    _id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name TEXT NOT NULL
+);
